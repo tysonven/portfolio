@@ -1,0 +1,295 @@
+---
+import { getCollection, render } from 'astro:content';
+import CaseStudy from '../../layouts/CaseStudy.astro';
+
+// ── getStaticPaths: tells Astro which URLs to build ──
+// This is the file that was missing — without it only index.html builds.
+export async function getStaticPaths() {
+  const posts = await getCollection('case-studies', ({ data }) => {
+    return data.status !== 'draft';
+  });
+
+  return posts.map(post => ({
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const {
+  title,
+  client,
+  category,
+  tags,
+  date,
+  stack,
+  live_url,
+  sop_url,
+  github_url,
+  excerpt,
+  featured,
+} = post.data;
+
+const categoryLabel: Record<string, string> = {
+  'flow-os':    'Flow OS',
+  'sproutcode': 'SproutCode',
+  'internal':   'Internal',
+  'winery':     'Winery',
+  'personal':   'Personal',
+};
+
+const pageTitle = `${title} — Tyson Venables`;
+const canonicalUrl = `https://work.flowos.tech/case-studies/${post.data.slug}`;
+---
+
+<CaseStudy
+  title={pageTitle}
+  description={excerpt}
+  canonical={canonicalUrl}
+>
+  <div class="container">
+
+    <!-- Back link -->
+    <nav class="breadcrumb fade-up">
+      <a href="/">← All builds</a>
+    </nav>
+
+    <!-- Case study header -->
+    <header class="cs-header fade-up fade-up-delay-1">
+      <div class="cs-meta">
+        <span class="tag">{categoryLabel[category] ?? category}</span>
+        <span class="cs-date">{date}</span>
+        {featured && <span class="featured-badge">Featured</span>}
+      </div>
+      <h1 class="cs-title">{title}</h1>
+      <p class="cs-client">{client}</p>
+      <p class="cs-excerpt">{excerpt}</p>
+
+      <!-- Sidebar info -->
+      <div class="cs-info-row">
+        {stack && stack.length > 0 && (
+          <div class="cs-info-block">
+            <p class="cs-info-label">Stack</p>
+            <div class="cs-stack">
+              {stack.map(s => <span class="stack-item">{s}</span>)}
+            </div>
+          </div>
+        )}
+        {(live_url || sop_url || (post.data as any).github_url) && (
+          <div class="cs-info-block">
+            <p class="cs-info-label">Links</p>
+            <div class="cs-links">
+              {live_url && <a href={live_url} target="_blank" rel="noopener" class="cs-link">Live site ↗</a>}
+              {(post.data as any).github_url && <a href={(post.data as any).github_url} target="_blank" rel="noopener" class="cs-link">GitHub ↗</a>}
+              {sop_url && <a href={sop_url} target="_blank" rel="noopener" class="cs-link">SOP ↗</a>}
+            </div>
+          </div>
+        )}
+        {tags && tags.length > 0 && (
+          <div class="cs-info-block">
+            <p class="cs-info-label">Tags</p>
+            <div class="cs-tag-list">
+              {tags.map(t => <span class="tag">{t}</span>)}
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+
+    <div class="cs-divider"></div>
+
+    <!-- Case study body -->
+    <article class="prose fade-up fade-up-delay-2">
+      <Content />
+    </article>
+
+    <!-- Footer CTA -->
+    <div class="cs-footer fade-up">
+      <p>Interested in building something like this?</p>
+      <a href="https://flowos.tech" target="_blank" rel="noopener" class="cta-btn">
+        Work with Flow OS →
+      </a>
+    </div>
+
+  </div>
+</CaseStudy>
+
+<style>
+  /* ── Breadcrumb ── */
+  .breadcrumb {
+    padding: 2rem 0 0;
+  }
+
+  .breadcrumb a {
+    font-size: 0.8125rem;
+    color: var(--muted);
+    transition: color 0.15s ease;
+    letter-spacing: 0.01em;
+  }
+
+  .breadcrumb a:hover { color: var(--teal); }
+
+  /* ── Header ── */
+  .cs-header {
+    padding: 2.5rem 0 0;
+  }
+
+  .cs-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .cs-date {
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  .featured-badge {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--green);
+    background: rgba(55, 202, 55, 0.08);
+    border: 1px solid rgba(55, 202, 55, 0.25);
+    border-radius: var(--radius);
+    padding: 0.2em 0.6em;
+  }
+
+  .cs-title {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  .cs-client {
+    font-size: 0.9375rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .cs-excerpt {
+    font-size: 1.0625rem;
+    color: var(--text-dim);
+    line-height: 1.65;
+    font-weight: 300;
+    max-width: 600px;
+    margin-bottom: 2rem;
+  }
+
+  /* ── Info row ── */
+  .cs-info-row {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--bg-border);
+    border-bottom: 1px solid var(--bg-border);
+    margin-bottom: 0;
+  }
+
+  .cs-info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cs-info-label {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .cs-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .stack-item {
+    font-size: 0.8125rem;
+    color: var(--text-dim);
+    background: var(--bg-raised);
+    border: 1px solid var(--bg-border);
+    border-radius: var(--radius);
+    padding: 0.2em 0.6em;
+  }
+
+  .cs-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .cs-link {
+    font-size: 0.8125rem;
+    color: var(--teal);
+    transition: color 0.15s ease;
+  }
+
+  .cs-link:hover { color: var(--text); }
+
+  .cs-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  /* ── Divider ── */
+  .cs-divider {
+    height: 3.5rem;
+  }
+
+  /* ── Footer CTA ── */
+  .cs-footer {
+    margin: 5rem 0 6rem;
+    padding: 2.5rem;
+    border: 1px solid var(--bg-border);
+    border-radius: var(--radius);
+    background: var(--bg-raised);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cs-footer p {
+    font-size: 1rem;
+    color: var(--text-dim);
+    font-weight: 300;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--bg);
+    background: var(--green);
+    border-radius: var(--radius);
+    padding: 0.65em 1.25em;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  .cta-btn:hover {
+    color: var(--bg);
+    opacity: 0.88;
+    transform: translateY(-1px);
+  }
+</style>
