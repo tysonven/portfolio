@@ -60,7 +60,7 @@ Over 20 beta users validated the concept — many asked to pay even when it was 
 
 ## Assets
 
-- [Live Platform](https://advisors.flowstatescollective.com)
+- [Live Platform](https://go.flowstatescollective.com/ai-advisors)
 - [Sales Funnel](https://go.flowstatescollective.com/ai-advisors)
 - [GitHub Repo](https://github.com/tysonven/emma-ai-advisors) *(private)*
 
