@@ -1,11 +1,3 @@
-<!-- HANDOFF
-Documented by: Claude
-Date: 2026-03-19
-Status: ready-to-publish
-Notes: All API keys and env vars redacted. Live URLs included. Featured = true.
-Publish to: GitHub → tysonvenables/portfolio → case-studies/flow-os/
--->
-
 ---
 title: "Emma Maidment AI Advisor Platform"
 slug: "emma-maidment-ai-advisors"
