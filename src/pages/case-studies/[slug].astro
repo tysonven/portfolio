@@ -155,9 +155,9 @@ const canonicalUrl = `https://work.flowos.tech/case-studies/${post.data.slug}`;
     font-weight: 500;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--green);
-    background: rgba(55, 202, 55, 0.08);
-    border: 1px solid rgba(55, 202, 55, 0.25);
+    color: var(--coral);
+    background: rgba(232, 116, 97, 0.08);
+    border: 1px solid rgba(232, 116, 97, 0.3);
     border-radius: var(--radius);
     padding: 0.2em 0.6em;
   }
@@ -239,7 +239,7 @@ const canonicalUrl = `https://work.flowos.tech/case-studies/${post.data.slug}`;
     transition: color 0.15s ease;
   }
 
-  .cs-link:hover { color: var(--text); }
+  .cs-link:hover { color: var(--coral); }
 
   .cs-tag-list {
     display: flex;
@@ -278,18 +278,18 @@ const canonicalUrl = `https://work.flowos.tech/case-studies/${post.data.slug}`;
     gap: 0.4rem;
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--bg);
-    background: var(--green);
+    color: #ffffff;
+    background: var(--teal);
     border-radius: var(--radius);
     padding: 0.65em 1.25em;
-    transition: opacity 0.15s ease, transform 0.15s ease;
+    transition: background 0.15s ease, transform 0.15s ease;
     letter-spacing: 0.01em;
     white-space: nowrap;
   }
 
   .cta-btn:hover {
-    color: var(--bg);
-    opacity: 0.88;
+    color: #ffffff;
+    background: var(--teal-deep);
     transform: translateY(-1px);
   }
 </style>

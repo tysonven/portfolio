@@ -38,17 +38,18 @@ const {
     <style is:global>
       /* ── Brand tokens ── */
       :root {
-        --teal:       #99cccc;
-        --teal-deep:  #2e8080;
-        --green:      #37ca37;
-        --muted:      #667085;
-        --bg:         #121212;
-        --bg-raised:  #1a1a1a;
-        --bg-border:  #242424;
-        --text:       #ffffff;
-        --text-dim:   rgba(255,255,255,0.6);
+        --teal:       #3d8b8b;
+        --teal-deep:  #2e7070;
+        --coral:      #e87461;
+        --green:      #3d8b8b;
+        --muted:      #7a7a7a;
+        --bg:         #faf9f7;
+        --bg-raised:  #f0efec;
+        --bg-border:  #e2e0dc;
+        --text:       #1a1a1a;
+        --text-dim:   rgba(26,26,26,0.55);
         --font:       'Outfit', sans-serif;
-        --radius:     4px;
+        --radius:     6px;
         --max-w:      860px;
       }
 
@@ -71,7 +72,7 @@ const {
       }
 
       a { color: var(--teal); text-decoration: none; }
-      a:hover { color: var(--text); }
+      a:hover { color: var(--coral); }
       img { max-width: 100%; display: block; }
 
       /* ── Site header ── */
@@ -99,12 +100,15 @@ const {
         gap: 0.5rem;
       }
 
-      .site-logo .dot {
-        width: 6px;
-        height: 6px;
-        background: var(--teal);
-        border-radius: 50%;
-        display: inline-block;
+      .logo-mark {
+        font-weight: 700;
+        color: var(--teal);
+      }
+
+      .logo-sep {
+        color: var(--muted);
+        font-weight: 300;
+        font-size: 0.75rem;
       }
 
       .site-nav {
@@ -121,7 +125,7 @@ const {
         transition: color 0.15s ease;
       }
 
-      .site-nav a:hover { color: var(--text); }
+      .site-nav a:hover { color: var(--teal); }
 
       /* ── Main content ── */
       main {
@@ -177,15 +181,15 @@ const {
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: var(--teal);
-        background: rgba(153, 204, 204, 0.08);
-        border: 1px solid rgba(153, 204, 204, 0.2);
+        background: rgba(61, 139, 139, 0.06);
+        border: 1px solid rgba(61, 139, 139, 0.25);
         border-radius: var(--radius);
         padding: 0.2em 0.6em;
       }
 
       /* ── Prose (case study body) ── */
       .prose {
-        color: rgba(255,255,255,0.85);
+        color: rgba(26,26,26,0.75);
         font-size: 1rem;
         line-height: 1.75;
       }
@@ -225,8 +229,8 @@ const {
 
       .prose li { margin-bottom: 0.4em; }
 
-      .prose a { color: var(--teal); border-bottom: 1px solid rgba(153,204,204,0.3); }
-      .prose a:hover { color: var(--text); border-color: var(--text); }
+      .prose a { color: var(--teal); border-bottom: 1px solid rgba(61,139,139,0.3); }
+      .prose a:hover { color: var(--coral); border-color: var(--coral); }
 
       .prose strong { color: var(--text); font-weight: 600; }
 
@@ -281,7 +285,8 @@ const {
     <header class="site-header">
       <div class="site-header-inner">
         <a href="/" class="site-logo">
-          <span class="dot"></span>
+          <span class="logo-mark">Flow OS</span>
+          <span class="logo-sep">×</span>
           Tyson Venables
         </a>
         <nav class="site-nav">
