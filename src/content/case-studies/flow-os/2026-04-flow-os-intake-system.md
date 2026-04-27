@@ -23,6 +23,8 @@ Publish to: github.com/tysonven/portfolio → src/content/case-studies/internal/
 
 # Productising Client Onboarding
 
+![The intake form welcome screen](/screenshots/2026-04-flow-os-intake-system/01-welcome.png)
+
 ## The Problem
 
 Client intake was happening over email. A new client would say yes to a build, then we'd swap a dozen messages over a week to scope brand voice, audience, offers, access, goals, the lot. Half the time something critical landed three days into the actual build, when going back to ask felt like admitting I should have asked sooner. The other half, scope drifted because nothing was written down in one place.
@@ -40,6 +42,8 @@ A custom-branded, multi-tenant client intake system live at a dedicated subdomai
 - An n8n workflow that receives submissions, formats the data, creates or updates a contact in GoHighLevel, attaches the full intake as a structured note, and sends a notification email
 - Honeypot spam protection plus IP-based rate limiting at the workflow layer
 - Multi-tenant architecture from day one: each client lives at their own subpath (`/kylie`, `/sally`, `/dani`), making future onboarding a folder duplication exercise rather than a rebuild
+
+![Intake submission landing as a structured note on the GHL contact](/screenshots/2026-04-flow-os-intake-system/02-ghl-contact.png)
 
 The first deployment went out the same session: form designed, deployed, n8n workflow built, end-to-end smoke test passed, ready to send to the first client. That client is a multi-business fitness professional running a Pilates studio chain, a Kajabi-hosted course business, and a Shopify ecommerce store, who needed a complete content system across three brands.
 
