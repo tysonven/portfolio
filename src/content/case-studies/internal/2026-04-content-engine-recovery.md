@@ -45,6 +45,8 @@ We diagnosed the actual root cause — Instagram's late-2025 enforcement of a ha
 
 Total time from "it's broken" to "shipped, tested, and committed" was roughly 90 minutes. More importantly, the architecture now treats platform spec changes as expected, not exceptional.
 
+![Six-platform pipeline orchestrating research, infographic generation, and posting via Blotato](/screenshots/content-engine-recovery/workflow.png)
+
 ## Tech Stack
 
 - **n8n (self-hosted)** — orchestrates the full content pipeline across six platforms
