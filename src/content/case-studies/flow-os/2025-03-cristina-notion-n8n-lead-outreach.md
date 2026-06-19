@@ -17,7 +17,7 @@ excerpt: "Turned a burned-out, fully manual cold outreach process into a branchi
 Documented by: Claude
 Date: 2026-06-19
 Status: ready-to-publish
-Notes: Screenshot asset at /assets/screenshots/cristina-notion-n8n-lead-outreach/workflow.png — copy from uploads. Cristina requested no last name used.
+Notes: Screenshot asset at /screenshots/cristina-notion-n8n-lead-outreach/workflow.png — copy from uploads. Cristina requested no last name used.
 Publish to: github.com/tysonven/portfolio → src/content/case-studies/flow-os/
 -->
 
@@ -79,8 +79,8 @@ Notion's internal property names don't always match what you see in the UI. Seve
 
 ## Assets
 
-- ![Workflow overview — Notion → n8n → Gmail with four-branch routing](/assets/screenshots/cristina-notion-n8n-lead-outreach/workflow.png)
-- ![Claude-generated Gmail draft — yacht charter cold outreach](/assets/screenshots/cristina-notion-n8n-lead-outreach/email-draft.png)
+- ![Workflow overview — Notion → n8n → Gmail with four-branch routing](/screenshots/cristina-notion-n8n-lead-outreach/workflow.png)
+- ![Claude-generated Gmail draft — yacht charter cold outreach](/screenshots/cristina-notion-n8n-lead-outreach/email-draft.png)
 
 ---
 
