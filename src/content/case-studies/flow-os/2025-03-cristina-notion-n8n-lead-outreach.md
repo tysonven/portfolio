@@ -4,7 +4,7 @@ slug: "cristina-notion-n8n-lead-outreach"
 client: "Cristina — Marketing Consultant, Crete"
 category: "flow-os"
 tags: ["n8n", "notion", "claude", "gmail", "automation", "lead-gen", "anthropic-api", "automate-to-elevate"]
-date: "2025-03"
+date: "2026-03"
 status: "published"
 featured: true
 stack: ["n8n", "Notion", "Claude (Sonnet)", "Gmail", "Anthropic API"]
