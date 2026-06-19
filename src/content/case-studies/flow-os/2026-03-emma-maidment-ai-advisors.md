@@ -70,8 +70,8 @@ Over 20 beta users validated the concept — many asked to pay even when it was 
 
 ## Screenshots
 
-![Avatar Architect — AI Advisor interface](/assets/screenshots/emma-maidment-ai-advisors/avatar-architect.png)
+![Avatar Architect — AI Advisor interface](/screenshots/emma-maidment-ai-advisors/avatar-architect.png)
 
-![Story Strategist — AI Advisor interface](/assets/screenshots/emma-maidment-ai-advisors/story-strategist.png)
+![Story Strategist — AI Advisor interface](/screenshots/emma-maidment-ai-advisors/story-strategist.png)
 
-![Magnetic Authority — AI Advisor interface](/assets/screenshots/emma-maidment-ai-advisors/magnetic-authority.png)
+![Magnetic Authority — AI Advisor interface](/screenshots/emma-maidment-ai-advisors/magnetic-authority.png)
