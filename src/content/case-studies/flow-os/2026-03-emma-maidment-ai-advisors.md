@@ -66,8 +66,6 @@ Over 20 beta users validated the concept — many asked to pay even when it was 
 
 ---
 
-*Built by Tyson Venables — [Flow Os](https://flowos.tech) | [Flowstates Collective](https://flowstatescollective.com)*
-
 ## Screenshots
 
 ![Avatar Architect — AI Advisor interface](/screenshots/emma-maidment-ai-advisors/avatar-architect.png)
@@ -75,3 +73,7 @@ Over 20 beta users validated the concept — many asked to pay even when it was 
 ![Story Strategist — AI Advisor interface](/screenshots/emma-maidment-ai-advisors/story-strategist.png)
 
 ![Magnetic Authority — AI Advisor interface](/screenshots/emma-maidment-ai-advisors/magnetic-authority.png)
+
+---
+
+*Built by Tyson Venables — [Flow Os](https://flowos.tech) | [Flowstates Collective](https://flowstatescollective.com)*
