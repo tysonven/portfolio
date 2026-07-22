@@ -83,7 +83,11 @@ Fathom's Business tier (the plan with CRM sync) runs $25/seat/month with a 2-use
 
 ## What I'd Do Differently
 
-Too early to say. Ask again after 30 days of real calls through the pipeline.
+**Map Zoom's webhook events before touching the Marketplace UI.** We picked the wrong event (Contact Center > Recording completed instead of Recording > Recording Transcript files have completed) based on unclear documentation, which cost two failed test call cycles and 40 minutes of debugging. A clear Zoom webhook event reference built into the spec upfront would have prevented it.
+
+**Make `users.json` a JS module from commit one.** Vercel's bundler only traces statically imported files into `/var/task` — runtime `fs` reads of untraced files fail silently in production. Any developer with Vercel experience knows this, and the fix was straightforward once the 500 error surfaced. It should have been caught in the spec, not in production.
+
+**Build the `download_token` path before the OAuth path.** Zoom's transcript download URLs respond with a 302 redirect to a CDN host, and the fetch spec drops the `Authorization` header on cross-origin redirects — producing a 401 that looks like a credentials problem but isn't. This is a documented Zoom API behaviour. The `download_token` included in the webhook payload is the correct fetch method. Starting there and treating OAuth as the fallback would have skipped an entire debugging cycle.
 
 ## Assets
 
