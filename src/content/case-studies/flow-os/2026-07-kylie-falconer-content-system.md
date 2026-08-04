@@ -5,7 +5,7 @@ client: "Kylie Falconer"
 category: "flow-os"
 tags: ["claude-projects", "notion", "brand-voice", "content-system", "multi-brand", "kajabi", "ghl", "dfy"]
 date: "2026-07"
-status: published
+status: "published"
 featured: true
 stack: ["Claude Projects", "Notion", "Kajabi", "GHL", "Loom"]
 live_url: null
@@ -145,6 +145,10 @@ That decision took an extra hour of staging and made the videos immediately usef
 At handoff, Kylie was thrilled with what she'd received. She and Monica were on the call together, and Monica had already watched the training videos ahead of time — a signal that the training material worked as designed and that Monica was engaged with the operational role.
 
 The system covered every daily and weekly workflow. The role split was clear enough that both people knew what they owned. The voice consistency across three distinct brands was strong enough that content would sound like Kylie from day one.
+
+> "Simply ecstatic with what you have produced and am very excited to begin practicing the brand strategy I worked through with Em now that I can execute with more efficiency."
+>
+> **Kylie Falconer**, founder of add goodness and Bare & Wilde
 
 ## What's next
 
