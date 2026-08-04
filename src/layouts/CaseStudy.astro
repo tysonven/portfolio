@@ -6,7 +6,7 @@ interface Props {
 }
 
 const {
-  title = "Tyson Venables — Flow OS Builds",
+  title = "Tyson Venables | Flow OS Builds",
   description = "AI systems, automation, and client builds by Tyson Venables. Flow OS case studies.",
   canonical = Astro.url.href,
 } = Astro.props;
@@ -20,6 +20,14 @@ const {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <title>{title}</title>
+
+    <!-- Favicon set -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Outfit font — clean geometric, not overused -->
 
     <!-- Outfit font — clean geometric, not overused -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
