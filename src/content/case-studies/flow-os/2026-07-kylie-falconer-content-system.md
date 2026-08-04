@@ -5,7 +5,7 @@ client: "Kylie Falconer"
 category: "flow-os"
 tags: ["claude-projects", "notion", "brand-voice", "content-system", "multi-brand", "kajabi", "ghl", "dfy"]
 date: "2026-07"
-status: "draft"
+status: published
 featured: true
 stack: ["Claude Projects", "Notion", "Kajabi", "GHL", "Loom"]
 live_url: null
@@ -13,13 +13,7 @@ sop_url: null
 excerpt: "A voice-first content architecture built for a founder running three distinct wellness brands. Claude Projects, Notion workflow spine, and a role split that respects both creative and operational time."
 ---
 
-<!-- HANDOFF
-Documented by: Claude
-Date: 2026-07-29
-Status: draft-pending-client-review
-Notes: Client (Kylie Falconer) approved case study with named brands. IP protected: no voice file contents, no sample outputs, no business numbers, no pricing. Direct quotes pending client sign-off. Awaiting Kylie's review before flipping status to "published".
-Publish to: github.com/tysonven/portfolio → src/content/case-studies/
--->
+
 
 ## The situation
 
