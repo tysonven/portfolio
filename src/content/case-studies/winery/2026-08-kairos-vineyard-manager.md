@@ -17,7 +17,7 @@ excerpt: "A purpose-built vineyard management tool for small-batch natural winem
 Documented by: Claude
 Date: 2026-08-04
 Status: ready-to-publish
-Notes: Screenshots committed to /assets/screenshots/kairos-vineyard-manager/ in same repo.
+Notes: Screenshots committed to /public/assets/screenshots/kairos-vineyard-manager/ in same repo.
 Publish to: github.com/tysonven/portfolio -> src/content/case-studies/winery/2026-08-kairos-vineyard-manager.md
 -->
 
@@ -33,21 +33,21 @@ A full-stack vineyard management web app at `app.kairos-wines.com` — purpose-b
 
 The app opens on a Today view that tells you immediately what kind of day it is: the biodynamic day type (fruit, root, flower, or leaf), current moon phase and whether the moon is ascending or descending, live weather at the vineyard's exact elevation, spray cycle status, and tasks due this week.
 
-![Today view showing BD day type, live weather at vineyard elevation, and spray countdown](/assets/screenshots/kairos-vineyard-manager/today-dashboard.png)
+<img src="/assets/screenshots/kairos-vineyard-manager/today-dashboard.png" alt="Today view showing BD day type, live weather at vineyard elevation, and spray countdown" width="600" style="border-radius: 8px; border: 1px solid #e2e0dc; margin: 1.5rem 0;" />
 
 A Week view shows the full 7-day forward picture so Monday morning planning takes minutes rather than hours. It identifies the best spray day, best soil work day, and next BD preparation window for the week ahead.
 
-![Week view showing 7-day BD planning, best spray day, and monthly companion planting notes](/assets/screenshots/kairos-vineyard-manager/week-view.png)
+<img src="/assets/screenshots/kairos-vineyard-manager/week-view.png" alt="Week view showing 7-day BD planning, best spray day, and monthly companion planting notes" width="600" style="border-radius: 8px; border: 1px solid #e2e0dc; margin: 1.5rem 0;" />
 
 Every day in the calendar carries four layers of information: BD day type, moon phase, ascending/descending indicator, and logged activity dots.
 
-![Calendar with four layers per day including moon phase, BD type, and ascending/descending moon](/assets/screenshots/kairos-vineyard-manager/calendar.png)
+<img src="/assets/screenshots/kairos-vineyard-manager/calendar.png" alt="Calendar with four layers per day including moon phase, BD type, and ascending/descending moon" width="600" style="border-radius: 8px; border: 1px solid #e2e0dc; margin: 1.5rem 0;" />
 
 Beyond the planning layer, the app covers: activity logging with full 2025 and 2026 seasonal history, spray tracking with rotation logic and sulphur-condition warnings, a Brix tracker with ripeness curves per variety, vine-by-vine condition mapping across all 12 rows, an AI-powered field scanner, weather integration with temperature and wind-speed spray warnings, a contacts directory of winemakers, suppliers, nurseries and advisors, and a forward task list running through to April 2027.
 
-![Field scan with AI agronomic analysis and photo library](/assets/screenshots/kairos-vineyard-manager/field-scan.png)
+<img src="/assets/screenshots/kairos-vineyard-manager/field-scan.png" alt="Field scan with AI agronomic analysis and photo library" width="600" style="border-radius: 8px; border: 1px solid #e2e0dc; margin: 1.5rem 0;" />
 
-![Brix tracker showing ripeness curves per variety with harvest readiness targets](/assets/screenshots/kairos-vineyard-manager/brix-tracker.png)
+<img src="/assets/screenshots/kairos-vineyard-manager/brix-tracker.png" alt="Brix tracker showing ripeness curves per variety with harvest readiness targets" width="600" style="border-radius: 8px; border: 1px solid #e2e0dc; margin: 1.5rem 0;" />
 
 ## Tech Stack
 
